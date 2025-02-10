@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+   
+   .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+ul li
+{
+filter: opacity(0.5);
+}
+ul li:hover{
+filter:opacity(1) ;
+}
+</style>
+<body>
+   <div>
+    <nav class="bg-slate-500 h-auto lg:rounded-b-xl lg:h-36">
+        
+        <div class="lg:flex justify-end px-4 pt-2 hidden ">
+            <img src="/img/shopping_cart_25dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="" width="30px">
+            <div class="-ml-2 -mt-2">
+              <p class="bg-white text-sm rounded-full w-5 text-center quantity">1</p>
+          </div>
+        </div>
+        <div class="flex items-center justify-between px-4 lg:flex-col lg:-mt-7">
+            
+                <img src="/img/L4.png" alt="" width="90px">
+            
+                <div class="flex items-center space-x-2 lg:hidden">
+                    <div class="flex">
+                        <img src="/img/shopping_cart_25dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="" width="30px">
+                        <div class="-ml-2 -mt-2">
+                          <p class="bg-white text-sm rounded-full w-5 text-center quantity1">1</p>
+                      </div>
+                    </div>
+                    
+                    <span class="text-white" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+                </div>
+                
+        </div>
+           <div class="hidden lg:block lg:mt-2">
+            <ul class="flex justify-center space-x-20 capitalize text-white text-lg
+            ">
+                <li class="" ><a id="home-link" href="index.html">home</a></li>
+                <li><a id="menu-link" href="menu1.html">menu</a></li>
+                <li><a id="contact-link" href="contact.html">contact us</a></li>
+                <li><a id="about-link" href="about.html">about us</a></li>
+                <li><a id="faq-link" href="faq.htm">faq</a></li>
+            </ul>
+           </div>
+           
+        
+    </nav>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <ul class="capitalize">
+            <li><a href="index.html">home</a></li>
+            <li><a href="menu1.html">menu</a></li>
+            <li><a href="contact.html">contact us</a></li>
+            <li><a href="about.html">about us</a></li>
+            <li><a href="faq.htm">faq</a></li>
+            </ul>
+        </div>
+      </div>
+   </div>
+   <script src="Header.js"></script>
+   <script src="javascript.js"></script>
+</body>
+</html>

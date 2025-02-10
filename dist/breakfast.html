@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="px-10">
+    <nav class="space-x-4 items-center  bg-slate-500 h-28 rounded-b-xl">
+        <div class="flex justify-end relative  p-3">
+          
+            <a href="cart.html"><img src="/img/shopping_cart_25dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="" width="35px" ></a>
+            <div class="-ml-2 -mt-2">
+                <p class="bg-white text-sm rounded-full w-5 text-center quantity"></p>
+            </div>
+        </div>
+
+        <div class="flex flex-col -mt-8">
+            <div class="flex justify-center">  
+               <img src="/img/logo.png" alt="" width="70px">
+            </div> 
+            <ul class=" flex items-center space-x-4 justify-center ">
+                <li class="text-lg capitalize
+                text-white opacity-70 hover:opacity-100 "><a href="#">Home</a></li>
+                <li class="text-lg capitalize
+                text-white opacity-70 hover:opacity-100 "><a href="menu.html">Menu</a></li>
+                <li class="text-lg capitalize
+                text-white opacity-70 hover:opacity-100 "><a href="">Contact</a></li>
+                <li class="text-lg capitalize
+                text-white opacity-70 hover:opacity-100 "><a href="">About</a></li>
+                <li class="text-lg capitalize
+                text-white opacity-70 hover:opacity-100 "><a href="">Faq</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+    <section class="p-10 ">
+        <div class="flex ">
+            <input type="search" placeholder="search..." name="" id="" class="px-2 py-1 border border-r-0  rounded-s-md outline-none w-96"><img src="/img/magnifying-glass-solid (1).svg" alt="" width="30px
+            " class="border p-1 border-l-0 rounded-e-md">
+
+         </div>
+         <div class="flex mt-10 space-x-7" >
+           <img src="/img/-2.jpg" alt="" width="400px" class="">
+           <div>
+            <h1 class="text-3xl font-semibold">Breakfast</h1>
+            <p  class="text-2xl mt-4 cash" data-product="breakfast">25,000 Ush</p>
+            <div class="flex mt-2">
+                <button onclick="toggleItem('breakfast', 25000, 'remove');" class="border px-1 font-bold rounded-s-md border-r-0 hover:bg-slate-300">-</button >
+                    <p class=" info border w-10 text-center " data-product="breakfast" ></p>
+                    
+                    <button  onclick="toggleItem('breakfast', 25000, 'add');" class="border px-1 font-bold rounded-e-md border-l-0 hover:bg-slate-300">+</button>
+
+                <button class="ml-4 hover:bg-slate-300 border rounded-lg p-1 " onclick="addCartItem()">Add to Cart</button>
+                <button  class="ml-4 order rounded-lg p-1 border hover:bg-slate-300">Buy now</button>
+                <button  class="ml-4 b">Add to Favourite</button>
+            </div>
+           </div>
+         </div>
+        
+    </section>
+    <script src="javascript.js">
+        
+    </script>
+</body>
+
+</html>
